@@ -41,10 +41,11 @@
 }
 
 .sidenav a {
+    font-style: italic;
     text-align: center;
     text-decoration: none;
     font-size: 15px;
-    color: #818181;
+    color: whitesmoke;
     display: block;
     margin: 15px;
 }
