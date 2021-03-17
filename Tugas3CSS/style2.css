@@ -1,0 +1,45 @@
+/* Latihan 1 */
+p {
+    color: blue;
+}
+
+/* Latihan 2 */
+.pink {
+    color: white;
+    background: pink;
+    padding: 5px;
+}
+
+.text-white {
+    color: white;
+}
+
+.bg-teal {
+    background: teal;
+}
+
+/* Latihan 3 */
+#header {
+    background: rgb(117, 117, 117);
+    color: white;
+    height: 100px;
+    padding: 50px;
+}
+
+/* Latihan 4 */
+input[type=text] {
+    background: none;
+    color: cyan;
+    padding: 10px;
+    border: 1px solid cyan;
+}
+
+/* Latihan 5 */
+* {
+    border: 1px solid grey;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
