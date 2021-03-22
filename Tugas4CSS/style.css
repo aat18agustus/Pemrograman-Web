@@ -17,22 +17,38 @@
     background: #CCCCCC;
 }
 
-/* Side bar */
 
-.sidenav #boxbutton {
-    width: auto;
-    padding: 30px;
-    margin-left: 29px;
+
+/* Sidenav mengcopy dari W3school Vertical Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: -20px;
+    padding: 0;
+    width: 200px;
+    border: 1px solid #555;
 }
 
-.sidenav #boxbutton button {
-    background-color: #000000;
-    width: 150px;
-    height: 65px;
-    margin: 5px;
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
 }
 
-/* Sidenav mengcopy dari W3school */
+li {
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
 .sidenav {
     width: 270px;
     height: 450px;
@@ -47,10 +63,23 @@
     font-size: 15px;
     color: whitesmoke;
     display: block;
-    margin: 15px;
 }
 
+/* Side bar BoxButton */
+.sidenav #boxbutton {
+    width: auto;
+    padding: 30px;
+    margin-left: 29px;
+}
 
+.sidenav #boxbutton button {
+    background-color: #000000;
+    width: 150px;
+    height: 65px;
+    margin: 5px;
+}
+
+/* artsheet */
 #artsheet {
     clear: both;
     width: 1000px;

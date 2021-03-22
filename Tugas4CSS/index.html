@@ -31,17 +31,21 @@
             <!---Navbar side untuk pilihan pindah page  --->
             <div class="sidenav">
                 <div id="boxbutton">
-                    <button style="background-color: wheat;" id="button" type='button' class='btn btn-primary center'><a
-                            href="#">Menu</a>
-                    </button>
-                    <button style="background-color: brown;" id="button" type='button' class='btn btn-primary center'>
-                        <a href="#">Profile</a></button>
-                    <button style="background-color: blue;" id="button" type='button' class='btn btn-primary center'><a
-                            href="#">Buku
-                            Tamu</a></button>
-                    <button style="background-color: aqua;" id="button" type='button' class='btn btn-primary center'><a
-                            href="#">Pengguna</a></button>
-                    <button id="button" type='button' class='btn btn-primary center'><a href="#">Setting</a></button>
+                    <ul>
+                        <li><button style="background-color: wheat;" id="button" type='button'
+                                class='btn btn-primary center'><a href="#">Menu</a>
+                            </button></li>
+                        <li><button style="background-color: brown;" id="button" type='button'
+                                class='btn btn-primary center'>
+                                <a href="#">Profile</a></button></li>
+                        <li><button style="background-color: blue;" id="button" type='button'
+                                class='btn btn-primary center'><a href="#">Buku
+                                    Tamu</a></button></li>
+                        <li><button style="background-color: aqua;" id="button" type='button'
+                                class='btn btn-primary center'><a href="#">Pengguna</a></button></li>
+                        <li><button id="button" type='button' class='btn btn-primary center'><a
+                                    href="#">Setting</a></button></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -50,24 +54,26 @@
             <!-- Content menggunakan bootsrap-->
             <form>
                 <div id="content">
-                    <div id="button" class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping">Nama</span>
-                        <input id="input" type="text" class="form-control" placeholder="Nama" aria-label="Nama"
-                            aria-describedby="addon-wrapping">
+                    <!-- Button Boostrap Button Sizing-->
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Nama">
                     </div>
-                    <div id="button" class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping">Email</span>
-                        <input id="input" type="text" class="form-control" placeholder="Email" aria-label="Email"
-                            aria-describedby="addon-wrapping">
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Email">
                     </div>
-                    <div id="button" class="input-group flex-nowrap">
-                        <span class="input-group-text" id="addon-wrapping">Jenis Kelamin</span>
-                        <input id="input" type="text" class="form-control" placeholder="Jenis Kelamin"
-                            aria-label="Jenis Kelamin" aria-describedby="addon-wrapping">
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Jenis Kelamin</span>
+                        <input type="text" class="form-control" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Jenis Kelamin">
                     </div>
+                    <!-- Button Boostrap Button Basic example-->
                     <div id="button" class="input-group flex-nowrap">
-                        <span id="textbox" class="input-group-text" id="addon-wrapping">Pesan</span>
-                        <textarea name="message" rows="4" cols="80"></textarea>
+                        <span id="textarea" class="input-group-text">Pesan</span>
+                        <textarea class="form-control" aria-label="With textarea"></textarea>
                     </div>
                     <div id="tombol">
                         <button>Kirim</button>
@@ -75,7 +81,6 @@
                     </div>
                 </div>
             </form>
-
         </div>
     </div>
     <div id="footer">
