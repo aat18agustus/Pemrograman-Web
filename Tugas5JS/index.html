@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Website Rif'at Chusnul Ma'afi</title>
+    <script src="js.js"></script>
+</head>
+
+<body class="p-3 mb-2 bg-secondary text-white">
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>Website Rif'at Chusnul Ma'afi</h1>
+            <!-- Menampilkan garis vertikal -->
+        </div>
+        <h1 id="garis">
+
+        </h1>
+    </div>
+
+    <div class="artsheet">
+        <!-- Side bar -->
+        <div id="navbar">
+            <!---Navbar side untuk pilihan pindah page  --->
+            <div class="sidenav">
+                <div id="boxbutton">
+                    <ul>
+                        <li><button style="background-color: wheat;" id="button" type='button'
+                                class='btn btn-primary center'><a href="#">Menu</a>
+                            </button></li>
+                        <li><button style="background-color: brown;" id="button" type='button'
+                                class='btn btn-primary center'>
+                                <a href="#">Profile</a></button></li>
+                        <li><button style="background-color: blue;" id="button" type='button'
+                                class='btn btn-primary center'><a href="#">Buku
+                                    Tamu</a></button></li>
+                        <li><button style="background-color: aqua;" id="button" type='button'
+                                class='btn btn-primary center'><a href="#">Pengguna</a></button></li>
+                        <li><button id="button" type='button' class='btn btn-primary center'><a
+                                    href="#">Setting</a></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <!-- Content menggunakan bootsrap-->
+            <form name="formInput" onsubmit="validasiEmail();" class="content">
+                <p>
+                    Form Buku Tamu
+                </p>
+                <!-- Button Boostrap Button Sizing-->
+                <div id="button" class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Nama" name="nama">
+                </div>
+                <div id="button" class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Email" name="email">
+                </div>
+                <div id="button" class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Jenis Kelamin</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Jenis Kelamin">
+                </div>
+                <p>
+                    contoh : Laki laki/Perempuan
+                </p>
+                <!-- Button Boostrap Button Basic example-->
+                <div id="button" class="input-group flex-nowrap">
+                    <span id="textarea" class="input-group-text">Pesan</span>
+                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                </div>
+                <div id="tombol">
+                    <button>Kirim</button>
+                    <button>Reset</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        <!-- Footer -->
+        <footer>
+            <div>
+                &copy; 2021 | Rif'at Chusnul Ma'afi | 190441100157
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
