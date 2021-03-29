@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Website Rif'at Chusnul Ma'afi</title>
     <script src="js.js"></script>
@@ -50,39 +51,50 @@
 
         <div>
             <!-- Content menggunakan bootsrap-->
-            <form name="formInput" onsubmit="validasiEmail();" class="content">
+            <form class="was-validated" id="form" name="formInput" onsubmit="validasiForm();">
                 <p>
                     Form Buku Tamu
                 </p>
                 <!-- Button Boostrap Button Sizing-->
                 <div id="button" class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="Nama" name="nama">
+                    <input id="nama" type="text" class="form-control is-invalid" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" placeholder="Nama" name="nama" required>
                 </div>
                 <div id="button" class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="Email" name="email">
+                    <input oninput="validasiEmail" id="email" type="text" class="form-control is-invalid"
+                        aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default"
+                        placeholder="Email" name="email" required>
+                    <span onclick="validasiEmail()" id="icon" class="input-group-text"
+                        id="inputGroup-sizing-small"></i><input type="checkbox" class="btn-check" id="btn-check-2"
+                            checked autocomplete="off">
+                        <label class="btn btn-primary" for="btn-check-2">Checked</label></span>
+
                 </div>
                 <div id="button" class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Jenis Kelamin</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input"
-                        aria-describedby="inputGroup-sizing-default" placeholder="Jenis Kelamin">
+                    <input id="jenis" type="text" class="form-control is-invalid" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-default" name="jenis" placeholder="Jenis Kelamin" required>
+                    <div class="invalid-feedback">
+                        Contoh : Laki laki/Perempuan
+                    </div>
                 </div>
-                <p>
-                    contoh : Laki laki/Perempuan
-                </p>
                 <!-- Button Boostrap Button Basic example-->
                 <div id="button" class="input-group flex-nowrap">
                     <span id="textarea" class="input-group-text">Pesan</span>
-                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                    <textarea id="pesan" class="form-control is-invalid" aria-label="With textarea" name="pesan"
+                        required></textarea>
+
                 </div>
                 <div id="tombol">
-                    <button>Kirim</button>
-                    <button>Reset</button>
+                    <button class="btn btn-primary" type="submit">Kirim</button>
+                    <button class="btn btn-primary" type="button" value="Reset form" onclick="Reset()">Reset</button>
                 </div>
             </form>
+            <div>
+
+            </div>
         </div>
     </div>
     <div class="footer">
