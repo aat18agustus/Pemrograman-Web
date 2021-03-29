@@ -99,20 +99,13 @@ li a:hover:not(.active) {
 
 #button span {
     width: 120px;
-
 }
 
 #button #textbox {
     width: 120px;
 }
 
-#icon #gambar {
-    text-align: center;
-
-}
-
 #tombol {
-
     margin-top: 20px;
     text-align: center;
 }
