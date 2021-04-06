@@ -5,6 +5,10 @@
     color: #333;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* header */
 header {
     height: 70px;
@@ -74,6 +78,7 @@ header ul li {
     width: 300px;
     background-color: rgba(16, 47, 80, .9);
     transition: .3s;
+    z-index: 9999;
 }
 
 .sidebar ul li a {
@@ -259,5 +264,9 @@ footer small {
 
     .col-4 {
         width: 50%;
+    }
+
+    .col-3 {
+        width: 100%;
     }
 }
