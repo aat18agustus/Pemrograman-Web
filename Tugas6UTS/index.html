@@ -4,39 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Link font w3school-->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- Link font googleapis Quicksand-->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <!-- Link font awesome-->
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Link Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="style.css">
-
-
+    <script src="js.js"></script>
     <title>Website RCM</title>
 </head>
 
 <body>
-    <!-- Side bar -->
-    <input type="checkbox" id="check">
-    <div class="sidebar">
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <!-- Side bar w3school -->
+    <div class="w3-sidebar w3-bar-block w3-border-right"
+        style="display: none; color: white ; background-color: rgba(16, 47, 80, .9);" id="mySidebar">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="#header" class="w3-bar-item w3-button">Home</a>
+        <a href="#Content" class="w3-bar-item w3-button">Form Buku Tamu</a>
+        <a href="#tabelTamu" class="w3-bar-item w3-button">Tabel Buku Tamu</a>
     </div>
+
     <!-- Header -->
     <header>
-        <div class="container">
+        <div id="header" class="container">
+            <button id="buttonside" type="button" class="btn btn" onclick="w3_open()"><i
+                    class="fas fa-bars fa-2x"></i></button>
             <h1><a href="#">Rif'at CM</a></h1>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#portofolio">Portofolio</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
         </div>
-        <label for="check" class="mobile-menu"><i class="fas fa-bars fa-2x"></i></label>
     </header>
 
     <!-- Bagian Banner -->
@@ -44,111 +43,116 @@
         <div class="container">
             <div class="banner-left">
                 <img src="img/profil.jpg">
-                <h2>Hai <br>
-                    Saya adalah seorang <span class="efek"></span></h2>
-                <p>Selamat datang di website saya!</p>
+                <h2>Hai.. <br>
+                    Selamat Datang Di Website Saya!</h2>
+                <p> Nama saya Rif'at Chusnul Ma'afi NIM 190441100157 </p>
             </div>
         </div>
     </section>
-    <script src="js.js"></script>
 
-    <!-- Bagian about -->
-    <section id="about">
+    <!-- Bagian Form Buku tamu dan Tabel -->
+    <section id="Content">
         <div class="container">
-            <h3>About</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged.</p>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
-                into electronic typesetting, remaining essentially unchanged.</p>
-        </div>
+            <h3>Form Buku Tamu</h3>
+            <div>
+                <!-- Content menggunakan bootsrap-->
+                <form class="was-validated" id="form" name="formInput" onsubmit="validasiForm();">
+                    <script src="js.js"></script>
+                    <!-- Button Boostrap Button Sizing-->
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Nama</span>
+                        <input id="nama" type="text" class="form-control is-invalid" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Nama" name="nama" required>
+                    </div>
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Email</span>
+                        <input id="email" type="text" class="form-control is-invalid" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" placeholder="Email" name="email" required>
+                        <span onclick="validasiEmail()" id="icon" class="input-group-text"
+                            id="inputGroup-sizing-small"></i><input type="checkbox" class="btn-check" id="btn-check-2"
+                                checked autocomplete="off">
+                            <label class="btn btn-primary" for="btn-check-2" value="cek">Checked</label></span>
+                    </div>
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">No telp</span>
+                        <input id="nomer" class="form-control is-invalid" aria-label="Sizing example input"
+                            placeholder="cth: 081234567890" name="nomer" required>
+                    </div>
+                    <div id="button" class="input-group mb-3">
+                        <span class="input-group-text" id="inputGroup-sizing-default">Jenis Kelamin</span>
+                        <input id="jenis" type="text" class="form-control is-invalid" aria-label="Sizing example input"
+                            aria-describedby="inputGroup-sizing-default" name="jenis" placeholder="Jenis Kelamin"
+                            required>
+                        <div class="invalid-feedback">
+                            Contoh : Laki laki/Perempuan
+                        </div>
+                    </div>
+                    <!-- Button Boostrap Button Basic example-->
+                    <div id="button" class="input-group flex-nowrap">
+                        <span id="textarea" class="input-group-text">Alamat</span>
+                        <textarea id="alamat" class="form-control is-invalid" aria-label="With textarea" name="alamat"
+                            required></textarea>
+                    </div>
+                    <div id="tombol">
+                        <button class="btn btn-primary" type="submit">Kirim</button>
+                        <button class="btn btn-primary" type="button" value="Reset form"
+                            onclick="Reset()">Reset</button>
+                    </div>
+                </form>
+            </div>
+            <!-- Bagian Tabel -->
+            <h3>Tabel Tamu</h3>
+            <div id="tabelTamu" class="tabel">
+                <table class="table table-success table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Nama</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">No Telp</th>
+                            <th scope="col">Jenis Kelamin</th>
+                            <th scope="col">Alamat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Rif'at Chusnul Ma'afi</td>
+                            <td>aat17agustus@gmail</td>
+                            <td>081233739503</td>
+                            <td>Laki-Laki</td>
+                            <td>Dsn.Karangan,Cerme,Gresik</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Akiess Mubarak Qisty</td>
+                            <td>akiesMubarok@gmail</td>
+                            <td>0812334545463</td>
+                            <td>Laki-Laki</td>
+                            <td>Jln.dua,Kenjeran,Surabaya</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Andiko Putra</td>
+                            <td>andikoput@gmail</td>
+                            <td>081234496609</td>
+                            <td>Laki-Laki</td>
+                            <td>Ds.Ambekan,MojoAgung,Jombang</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>Nafi'ul Anam</td>
+                            <td>nafiulanam123@gmail</td>
+                            <td>081235657686</td>
+                            <td>Laki-Laki</td>
+                            <td>Ds.Kamal,Kamal,Madura</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
     </section>
 
-    <!-- Bagian Skill -->
-    <section id="skills">
-        <div class="container">
-            <h3>skill</h3>
-            <h4>HTML</h4>
-            <div class="bar">
-                <span class="nilai html">50%</span>
-            </div>
-            <h4>CSS</h4>
-            <div class="bar">
-                <span class="nilai css">60%</span>
-            </div>
-            <h4>Java Script</h4>
-            <div class="bar">
-                <span class="nilai js">30%</span>
-            </div>
-            <h4>PHP</h4>
-            <div class="bar">
-                <span class="nilai php">40%</span>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bagian Skill -->
-    <section id="portofolio">
-        <div class="container">
-            <h3>Portofolio</h3>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 1</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 2</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 3</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 4</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 1</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 2</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 3</span></a>
-            </div>
-            <div class="col-4">
-                <a href="#"><img src="img/gmb1.jpg">
-                    <span>Portofolio 4</span></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bagian Skill -->
-    <section id="contact">
-        <div class="container">
-            <h3>Contact</h3>
-            <div class="col-3">
-                <h4>Alamat</h4>
-                <p>Dsn Karangan, Cerme, Gresik</p>
-            </div>
-            <div class="col-3">
-                <h4>Email</h4>
-                <p>aat17agustus@gmail.com</p>
-            </div>
-            <div class="col-3">
-                <h4>Telp/Hp</h4>
-                <p>+62 7398 3538 3875</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Bagian Skill -->
+    <!-- Bagian Footer -->
     <footer>
         <div class="container">
             <small>Copyright &copy; 2021 - Rif'at Chusnul Ma'afi.</small>
