@@ -1,3 +1,27 @@
+const txtElement = ['Rifat', 'Chusnul', 'Maafi'];
+let count = 0;
+let txtIndex = 0;
+let curentTxt = '';
+let words = '';
+
+(function ngetik() {
+
+    if (count == txtElement.length) {
+        count = 0;
+    }
+    curentTxt = txtElement[count];
+
+    words = curentTxt.slice(0, ++txtIndex);
+    document.querySelector('.efek').textContent = words;
+
+    if (words.length == curentTxt.length) {
+        count++;
+        txtIndex = 0;
+    }
+
+    setTimeout(ngetik, 500)
+})();
+
 function validasiEmail() {
     var rs = document.forms["formInput"]["email"].value;
     var atps = rs.indexOf("@");
@@ -30,7 +54,7 @@ function Reset() {
     document.getElementById("form").reset();
 }
 
-/* fungsi untuk Side Bar*/
+/* fungsi untuk Side Bar w3school*/
 function w3_open() {
     document.getElementById("mySidebar").style.display = "block";
 }
