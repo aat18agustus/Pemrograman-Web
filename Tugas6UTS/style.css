@@ -14,7 +14,7 @@ html {
 
 /* header */
 header {
-    height: 70px;
+    height: 80px;
 }
 
 header label {
@@ -45,6 +45,7 @@ a {
     text-decoration: none;
 }
 
+
 /* container */
 .container {
     width: 90%;
@@ -64,7 +65,7 @@ a {
 }
 
 section {
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .banner img {
@@ -93,6 +94,18 @@ section {
     padding-left: 24px;
 }
 
+.banner-bottom {
+    padding-top: 40px;
+    margin-bottom: -30px;
+    height: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.banner-bottom a i {
+    color: #fff;
+}
+
 /* bagian Content */
 .was-validated {
     padding: 15px;
@@ -103,6 +116,10 @@ section {
 table tr th,
 td {
     color: #333;
+}
+
+.tabel {
+    padding-top: 55px;
 }
 
 #content p {

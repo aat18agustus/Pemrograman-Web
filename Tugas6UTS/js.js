@@ -1,4 +1,4 @@
-const txtElement = ['Rifat', 'Chusnul', 'Maafi'];
+const txtElement = ["Ri'fat", "Chusnul", "Ma'afi"];
 let count = 0;
 let txtIndex = 0;
 let curentTxt = '';
